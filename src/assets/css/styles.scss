@@ -1,0 +1,183 @@
+body{
+  background-color: black;
+}
+// switch button
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #c21111;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #0a830a;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #0a830a;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+// header part
+.headercontainer{
+  justify-content: space-between;
+  position: absolute;
+  top: 25px;
+  color: white;
+  display: flex;
+  width: 100%;
+}
+.headerleft{
+  position: absolute;
+  left: 120px;
+  right: auto;
+  display: inline-flex;
+  user-select: none;
+}
+.uncodeimg{
+  width: 35px;
+  padding: 0 20px
+}
+.shareimg{
+  width: 30px;
+  padding: 0 20px;
+}
+.leftelement{
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+.leftelement:hover{
+  cursor: pointer ;
+}
+
+.vertical-line {
+  margin: auto;
+  display: inline-block;
+  width: 1px;
+  height:20px; /* Adjust the height as needed */
+  background-color: white; /* Adjust the color as needed */
+}
+.right-vertical-line {
+  margin: auto;
+  display: inline-block;
+  width: 1px;
+  height:30px; /* Adjust the height as needed */
+  background-color: white; /* Adjust the color as needed */
+}
+
+.headerright{
+  position: absolute;
+  right: 120px;
+  left: auto;
+  user-select: none;
+}
+
+// container part
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.horizontal_linebody{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.text-container {
+  text-align: left;
+}
+.horizontalname{
+  text-wrap: nowrap;
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.custom-line {
+  border: none;
+  border-top: 3px solid white;
+  margin: 8px 0 10px 0;
+  width: 100%;
+  color: white;
+}
+// From react-bubble-chart (instead of importing):
+/* Center the contents of the bubble chart */
+.bubble-chart-container {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.positive-bubble .bubble-chart g{
+  -webkit-filter: drop-shadow(0 0 15px green);
+  filter: drop-shadow(0 0 15px green);
+}
+
+.negative-bubble .bubble-chart g{
+  -webkit-filter: drop-shadow(0 0 15px red);
+  filter: drop-shadow(0 0 15px red);
+}
+
+.selected{
+  color: cyan;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+  to {
+    opacity: 1;
+    box-shadow: 0 0 0 10px rgba(255, 0, 0, 0.2);
+  }
+}
